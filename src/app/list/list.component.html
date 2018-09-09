@@ -1,0 +1,46 @@
+<div class="row row-cards">
+<div class="col-lg-9">
+<div class="form-group">
+  <input type="text" class="form-control" id="usr" [(ngModel)]="t.name">
+</div>
+</div>
+<div class="col-lg-1">
+<div>
+  <button type="Add" class="btn btn-primary" (click)="addtask()">Add New</button>
+</div>
+</div>
+<div class="col-lg-1">
+<div>
+    <button type="button" class="btn btn-primary" (click)="updatetask()">Update</button>
+  </div>
+</div>
+</div>
+<br>
+<br>
+.
+
+<ul class="list-group">
+
+
+  <li class="list-group-item" *ngFor="let tas of tasks;let i = index">
+      <div class="row row-cards">
+      <div class="col-lg-10">
+      {{tas.name}}
+      </div>
+    <div class="col-lg-1">
+      <button (click)="edit(i)" type="button" class="btn btn-warning btn-sm">
+          Edit
+      </button>
+    </div>
+    <div class="col-lg-1">
+      <button (click)="delete(i)" type="button" class="btn btn-danger btn-sm">
+          Close
+      </button>
+    </div>
+  </div>
+      <!-- <button (click)="delete(i)" type="button" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+  </li>
+   
+</ul>
